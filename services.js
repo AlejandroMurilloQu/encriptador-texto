@@ -11,6 +11,6 @@ export function desencriptar(texto){
 }
 
 export function validarTexto(texto){
-    const regex = /^[a-z0-9]+$/;
+    const regex = /^[a-z0-9 ]*$/;
     return regex.test(texto)
 }
