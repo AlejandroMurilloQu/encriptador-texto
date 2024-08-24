@@ -34,7 +34,14 @@ desencriptarBtn.addEventListener('click', ()=>{
 
 copiarBtn.addEventListener('click',async()=>{
     await navigator.clipboard.writeText(resultado.innerText)
-    copiarBtn.innerText = "Copiado"
+    copiarBtn.querySelector('span').innerText = "Copiado!"
+    copiarBtn.querySelector('img').classList.remove('hidden')
+    copiarBtn.ariaBusy = "true"
+    setTimeout(()=>{
+        copiarBtn.querySelector('span').innerText = "Copiar"
+        copiarBtn.querySelector('img').classList.add('hidden')
+        copiarBtn.ariaBusy = "false"
+    },1000)
 })
 
 
