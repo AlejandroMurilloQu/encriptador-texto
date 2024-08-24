@@ -12,7 +12,7 @@ const copiarBtn = document.getElementById('copiarBtn')
 encriptarBtn.addEventListener('click', ()=>{
     if(!input.value.trim()) return 
     if(!validarTexto(input.value)) {
-        alert("Texto invalido")
+        alert("Texto invalido, ingrese texto en minusculas y sin acentos!")
         return
     }
 
@@ -26,7 +26,7 @@ desencriptarBtn.addEventListener('click', ()=>{
     if(!input.value.trim()) return 
 
     if(!validarTexto(input.value)) {
-        alert("Texto invalido")
+        alert("Texto invalido, ingrese texto en minusculas y sin acentos!")
         return
     }
     const textoDesencriptado = desencriptar(input.value)
