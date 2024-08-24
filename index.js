@@ -10,6 +10,7 @@ const copiarBtn = document.getElementById('copiarBtn')
 
 
 encriptarBtn.addEventListener('click', ()=>{
+    if(!input.value.trim()) return 
     if(!validarTexto(input.value)) {
         alert("Texto invalido")
         return
@@ -22,6 +23,8 @@ encriptarBtn.addEventListener('click', ()=>{
 })
 
 desencriptarBtn.addEventListener('click', ()=>{
+    if(!input.value.trim()) return 
+
     if(!validarTexto(input.value)) {
         alert("Texto invalido")
         return
