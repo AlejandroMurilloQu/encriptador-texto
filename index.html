@@ -8,23 +8,22 @@
 </head>
 <body>
     <main class="container">
-        <div class="main-section">
-            <img src="./assets/logo.svg" alt="logo de alura"/>
-            <div class="input-container">
-                <input placeholder="Ingrese el texto aqui" id="texto-encriptar"/>
-
-                <div class="buttons__container">
-                    <span><img src="./assets/exclamation-icon.svg" /> Solo letras minúsculas y sin acentos</span>
-                    <div class="buttons">
-                        <button id="encriptarBtn">Encriptar</button>
-                        <button id="desencriptarBtn">Desencriptar</button>
-                    </div>
+        <img src="./assets/logo.svg" alt="logo de alura" class="logo"/>
+        
+        <div class="input-container">
+            <input placeholder="Ingrese el texto aqui" id="texto-encriptar" class="input-texto"/>
+            <div class="buttons__container">
+                <span><img src="./assets/exclamation-icon.svg" /> Solo letras minúsculas y sin acentos</span>
+                <div class="buttons">
+                    <button id="encriptarBtn">Encriptar</button>
+                    <button id="desencriptarBtn">Desencriptar</button>
                 </div>
             </div>
         </div>
+
         <div class="results-container">
             <div id="empty-result">
-                <img src="./assets/muñeco.png" />
+                <img src="./assets/muñeco.png"/>
                 <div class="results-text">
                     <h4>Ningun mensaje fue encontrado</h4>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
@@ -33,7 +32,12 @@
 
             <div class="results-container-result hidden" id="resultado-container">
                 <p id="texto-resultado"></p>
-                <button id="copiarBtn">Copiar</button>
+                <button id="copiarBtn" aria-busy="false">
+                    <img src="./assets/check-icon.svg" class="hidden"/>
+                    <span>Copiar</span>
+                </button>
+
+                
             </div>
             
         </div>
